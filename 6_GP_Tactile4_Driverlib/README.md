@@ -29,6 +29,12 @@
 | 3번 | GPIO68 | 25번 |
 | 4번 | GPIO67 | 23번 |
 
+![F28P65x 모듈 GPIO67~70 - 개발보드 V2 (6) 범용 TACT 스위치 4개 배선도](f28xevm_v2_tactile4.png)
+
+위 배선도의 "정상(비반전)" 행 SW1~4가 왼쪽부터 순서대로 핀 29/27/25/23번에 연결되는
+것을 보면, 점퍼선이 서로 교차하지 않고 나란히 들어가는 걸 확인할 수 있습니다 — 이게
+스위치 번호를 핀 순서와 반대로 배정한 이유입니다.
+
 ## 소프트웨어 버전
 CCS 21.x / **SysConfig 미사용** / C2000Ware 26.00.00.00 driverlib(로컬 복사) / CGT 22.6.3.LTS.
 `device.h`/`device.c`/`driverlib.h`/driverlib 헤더 전체/`driverlib.lib`를 전부 프로젝트

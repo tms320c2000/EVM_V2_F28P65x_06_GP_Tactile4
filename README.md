@@ -26,6 +26,8 @@ README.md를 참고하세요.
 스위치=GPIO70/29번 핀 ~ 4번 스위치=GPIO67/23번 핀). 자세한 내용은 각 폴더의 README.md를
 참고하세요.
 
+![F28P65x 모듈 GPIO67~70 - 개발보드 V2 (6) 범용 TACT 스위치 4개 배선도](6_GP_Tactile4_Driverlib/f28xevm_v2_tactile4.png)
+
 ## 프로세서 모듈
 
 - [TMS320F28P650DK9 모듈(산업용)](https://tms320f28x.co.kr/goods/goods_view.php?goodsNo=200903200)

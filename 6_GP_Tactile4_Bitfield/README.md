@@ -25,6 +25,8 @@
 | 3번 | GPIO68 | 25번 |
 | 4번 | GPIO67 | 23번 |
 
+![F28P65x 모듈 GPIO67~70 - 개발보드 V2 (6) 범용 TACT 스위치 4개 배선도](../6_GP_Tactile4_Driverlib/f28xevm_v2_tactile4.png)
+
 ## 소프트웨어 버전
 CCS 21.x / **SysConfig·C2000Ware 라이브러리 링크 없음** (products="C2000WARE"만 사용) /
 CGT 22.6.3.LTS. `device/common_include`, `device/headers_include`에 필요한 클래식 헤더를

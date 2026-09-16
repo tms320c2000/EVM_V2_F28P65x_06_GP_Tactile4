@@ -24,6 +24,8 @@
 | 3번 | GPIO68 | 25번 |
 | 4번 | GPIO67 | 23번 |
 
+![F28P65x 모듈 GPIO67~70 - 개발보드 V2 (6) 범용 TACT 스위치 4개 배선도](../6_GP_Tactile4_Driverlib/f28xevm_v2_tactile4.png)
+
 ## 소프트웨어 버전
 CCS 21.x / **SysConfig 미사용** / C2000Ware 26.00.00.00 driverlib(로컬 복사) / **FreeRTOS
 커널 소스 전체를 `FreeRTOS/` 폴더에 로컬 복사** / CGT 22.6.3.LTS
