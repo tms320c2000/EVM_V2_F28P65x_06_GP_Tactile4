@@ -54,6 +54,12 @@ portTICK_PERIOD_MS)`(그동안 CPU를 Idle 태스크에게 넘겨줌)를 씁니�
 3. Debug 연결 후 Flash/Run — `.ccxml`은 `TMS320F28P650DK9.ccxml` 사용 (DK8-Q1 최초 연결 시
    확인 필요, 6_GP_Tactile4_Driverlib와 동일한 주의사항)
 
+압축을 미리 풀어서 import하거나 zip 파일을 그대로 "Select archive file"로 import해도
+둘 다 정상 동작합니다 — `driverlib.lib`를 zip-import 시 unresolved로 만들던 버그를
+고쳤습니다(자세한 내용은
+[6_GP_Tactile4_Driverlib의 Import 절](../6_GP_Tactile4_Driverlib/README.md#import--build--flash--run)
+참고).
+
 ## 정상 동작 확인
 6_GP_Tactile4_Driverlib와 동일하게 스위치를 누르면 LED Indicator가 반응합니다. 딜레이가
 `vTaskDelay()`(FreeRTOS 틱 기준, 1ms 틱)로 바뀌어서 폴링 주기가 DriverLib 버전의

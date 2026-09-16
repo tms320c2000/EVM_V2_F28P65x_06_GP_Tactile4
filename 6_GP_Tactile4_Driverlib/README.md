@@ -89,11 +89,21 @@ risingEdges = (uint16_t)(state & (uint16_t)(~prevState));
 직접 관찰할 수 있게 했습니다 — 정식 디바운스 구현은 이후 예제에서 다룰 예정입니다.
 
 ## Import → Build → Flash → Run
-1. CCS에서 `CCS/6_GP_Tactile4_Driverlib.projectspec`를 Import
+1. CCS에서 `CCS/6_GP_Tactile4_Driverlib.projectspec`를 Import — 압축을 미리 풀어서
+   "Select search-directory"로 폴더를 지정하거나, zip 파일을 그대로 "Select archive
+   file"로 지정해도 됩니다(둘 다 정상 동작 — 아래 참고).
 2. Build (CPU1_RAM 또는 CPU1_FLASH)
 3. Debug 연결 후 Flash/Run
 4. `.ccxml`은 `TMS320F28P650DK9.ccxml`을 그대로 사용 — F28P659DK8-Q1 최초 연결 시 정상
    인식 확인 필요
+
+> **고친 zip-import 버그**: 예전엔 `driverlib.lib`를 `.projectspec`에
+> `action="link"`로 지정해서, GitHub에서 zip을 받아 CCS "Select archive file"로 바로
+> import하면 `driverlib.lib`가 **unresolved**로 뜨는 문제가 있었습니다 — CCS가 zip을
+> 임시 폴더(`...\AppData\Local\Temp\ccs-import-XXXXXX\`)에 풀고 나서 그 임시 경로를
+> 가리키는 링크를 만드는데, 임시 폴더가 정리되면 링크가 끊어지기 때문입니다(압축을
+> 미리 풀어서 폴더로 import하면 그 폴더가 안 지워지니 문제가 없었습니다). `device/`
+> 폴더처럼 `action="copy"`로 바꿔서 완전히 해결했습니다.
 
 ## 정상 동작 확인
 - 4개 택트 스위치를 누를 때마다 스위치 옆 LED Indicator가 즉시 반응하면 배선이 맞는
